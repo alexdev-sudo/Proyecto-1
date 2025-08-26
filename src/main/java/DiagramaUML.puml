@@ -1,0 +1,57 @@
+@startuml
+package entidades{
+class atleta{
+-nombre:String
+-edad: int
+-departamento : String
+-disciplina: String
+-entrenamientos: List<Entrenamiento>
++agregarentrenamiento(e:Entrenamiento)
++getEntrenamientos()
+
+}
+
+class disciplina{
+-nombre: String
+-medicion: String
++getnombre()
++getmedida()
+
+}
+class Entrenamiento{
+-fecha: String
+-tipo :String
+-valor: double
++getFecha()
++getTipo()
++getValor()
+
+}
+}
+
+package gestion{
+interface Igestor<T>{
++agregar(T objet)
++buscar(String nombre): T
+
+class GestorAtletas implements Igestor<Atleta>
+
+class GestorEstadisstica{
++promedio(atetla)
++mejormarca(atletas)
++mostrarHistoria(atleta)
+}
+}
+class main{
+}
+
+atleta "1" --> "*" Entrenamiento
+Entrenamiento "*" --> "1" disciplina
+GestorAtletas ..|> Igestor
+main --> atleta
+main --> GestorAtletas
+main --> GestorEstadisstica
+
+
+
+@enduml
