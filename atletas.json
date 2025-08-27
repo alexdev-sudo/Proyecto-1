@@ -1,0 +1,117 @@
+[
+  {
+    "nombre": "ezequiel castro",
+    "edad": 24,
+    "departamento": "guatemala",
+    "disciplina": {
+      "nombre": "natacion",
+      "medida": "segundos"
+    },
+    "entrenamientos": [
+      {
+        "fecha": "2025-08-27",
+        "tipo": "natacion por vuelta",
+        "valor": 120.0,
+        "unidad": "Segundos"
+      },
+      {
+        "fecha": "2025-08-25",
+        "tipo": "resistencia en piscina",
+        "valor": 350.5,
+        "unidad": "Segundos"
+      }
+    ]
+  },
+  {
+    "nombre": "mariana lopez",
+    "edad": 21,
+    "departamento": "quetzaltenango",
+    "disciplina": {
+      "nombre": "atletismo",
+      "medida": "metros"
+    },
+    "entrenamientos": [
+      {
+        "fecha": "2025-08-20",
+        "tipo": "carrera de 100m",
+        "valor": 12.8,
+        "unidad": "Segundos"
+      },
+      {
+        "fecha": "2025-08-26",
+        "tipo": "carrera de 400m",
+        "valor": 58.4,
+        "unidad": "Segundos"
+      }
+    ]
+  },
+  {
+    "nombre": "carlos perez",
+    "edad": 27,
+    "departamento": "sacatepequez",
+    "disciplina": {
+      "nombre": "ciclismo",
+      "medida": "kilometros"
+    },
+    "entrenamientos": [
+      {
+        "fecha": "2025-08-22",
+        "tipo": "ciclismo de ruta",
+        "valor": 45.2,
+        "unidad": "Kilometros"
+      },
+      {
+        "fecha": "2025-08-24",
+        "tipo": "ciclismo en montaña",
+        "valor": 30.7,
+        "unidad": "Kilometros"
+      }
+    ]
+  },
+  {
+    "nombre": "sofia ramirez",
+    "edad": 19,
+    "departamento": "chimaltenango",
+    "disciplina": {
+      "nombre": "pesas",
+      "medida": "kilogramos"
+    },
+    "entrenamientos": [
+      {
+        "fecha": "2025-08-18",
+        "tipo": "levantamiento de pecho",
+        "valor": 65.0,
+        "unidad": "Kg"
+      },
+      {
+        "fecha": "2025-08-26",
+        "tipo": "sentadillas con peso",
+        "valor": 85.5,
+        "unidad": "Kg"
+      }
+    ]
+  },
+  {
+    "nombre": "andres morales",
+    "edad": 30,
+    "departamento": "alta verapaz",
+    "disciplina": {
+      "nombre": "boxeo",
+      "medida": "rounds"
+    },
+    "entrenamientos": [
+      {
+        "fecha": "2025-08-15",
+        "tipo": "sparring",
+        "valor": 8,
+        "unidad": "Rounds"
+      },
+      {
+        "fecha": "2025-08-25",
+        "tipo": "bolsa pesada",
+        "valor": 5,
+        "unidad": "Rounds"
+      }
+    ]
+  }
+]

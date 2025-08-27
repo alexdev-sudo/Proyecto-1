@@ -26,4 +26,21 @@ public List <Entrenamientos> getEntrenamientos(){
 public String getNombre() {return nombre;}
 public int getEdad() {return edad;}
 
+
+    public void mostrarhistorial(){
+    if (entrenamientos == null  ||  entrenamientos.isEmpty()){
+        System.out.println("no hay entrenamietos registrados para: " + nombre);
+        return;
+    }
+        System.out.println("\nHistorial de entrenamientos: ");
+        System.out.println("Atleta: "+nombre);
+        System.out.println("Disciplina: "+ disciplina.getNombre()+"\n");
+
+        System.out.printf("%-12s| %-40s| %-10s| %-10s|\n","Fecha","Tipo entreno ","Valor ","Unidad");
+        System.out.println("-----------------------------------------------------------------");
+        for (Entrenamientos e:entrenamientos){
+            System.out.printf("%-12s| %-40s| %-10s| %-10s|\n",e.getFecha(),e.getTipo(),e.getValor(),e.getUnidad());
+
+        }
+    }
 }

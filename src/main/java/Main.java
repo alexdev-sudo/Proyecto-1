@@ -55,7 +55,9 @@ public class Main {
                         System.out.println("Ingrese valor del entrenamiento del atleta: ");
                         double datoentreno = leer.nextDouble();
                         leer.nextLine();
-                        a.agregarEntrenamiento(new Entrenamientos(LocalDate.now(), tipo, datoentreno));
+                        System.out.println("Ingrese la unidad de medida del entrenamiento");
+                        String medida = leer.nextLine();
+                        a.agregarEntrenamiento(new Entrenamientos(LocalDate.now(), tipo, datoentreno,medida));
                         System.out.println("entrenamiento agregado exitosamente");
                     }else{
                         System.out.println("ateleta no existe");
@@ -68,7 +70,7 @@ public class Main {
                     String nombrehistorial = leer.nextLine();
                     atleta h = gestor.buscar(nombrehistorial);
                     if (h != null) {
-                        estadisticas.mostrarHistorial(h);
+                        h.mostrarhistorial();
                     }else {
                         System.out.println("Lista vacia, imposible buscar atleta");
 
@@ -81,6 +83,7 @@ public class Main {
                     String nombreestadistica = leer.nextLine();
                     atleta s = gestor.buscar(nombreestadistica);
                     if (s != null) {
+                        System.out.println("-- Estadisticas del atleta-- :"+ nombreestadistica);
                         System.out.println("Promedio: " + estadisticas.promedio(s));
                         System.out.println("Mejor Marca: " + estadisticas.mejormarca(s));
                     }else{
