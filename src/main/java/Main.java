@@ -28,22 +28,24 @@ public class Main {
             opcion = leer.nextInt();
             switch(opcion){
                 case 1:
+                    leer.nextLine();
                     System.out.println("Ingresa el nombre del atleta: ");
-                    String nombre = leer.nextLine();
+                    String nombreregistro = leer.nextLine();
                     System.out.println("ingrese la edad del atleta: ");
-                    int edad = leer.nextInt();
+                    int edad = leer.nextInt(); leer.nextLine();
                     System.out.println("ingrese departamento del atleta: ");
                     String depart = leer.nextLine();
                     System.out.println("ingrese disciplina del atleta: ");
                     String disc = leer.nextLine();
                     System.out.println("ingrese unidad de medida del entrenemiento de atleta: ");
                     String med = leer.nextLine();
-                    atleta atleta1 = new atleta(nombre, edad,depart,new Disciplina(disc,med));
+                    atleta atleta1 = new atleta(nombreregistro, edad,depart,new Disciplina(disc,med));
                     gestor.agregar(atleta1);
                     System.out.println("atleta registrado exitosamente");
 
                     break;
                 case 2:
+                    leer.nextLine();
                     System.out.println("Ingresa el nombre del atleta: ");
                     String nombreatleta = leer.nextLine();
                     atleta a = gestor.buscar(nombreatleta);
@@ -61,20 +63,21 @@ public class Main {
                     }
                     break;
                 case 3:
-
+                    leer.nextLine();
                     System.out.println("Ingresa el nombre del atleta: ");
                     String nombrehistorial = leer.nextLine();
                     atleta h = gestor.buscar(nombrehistorial);
                     if (h != null) {
                         estadisticas.mostrarHistorial(h);
                     }else {
-                        System.out.println("atletea no existe");
+                        System.out.println("Lista vacia, imposible buscar atleta");
 
                     }
                     
                     break;
                 case 4:
-                    System.out.println("Ingresa el nombre del atleta: ");
+                    leer.nextLine();
+                    System.out.println("Ingresa el nombrere del atleta: ");
                     String nombreestadistica = leer.nextLine();
                     atleta s = gestor.buscar(nombreestadistica);
                     if (s != null) {
