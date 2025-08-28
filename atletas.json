@@ -38,6 +38,30 @@
         "unidad": "Segundos"
       },
       {
+        "fecha": "2025-08-05",
+        "tipo": "carrera de 100m",
+        "valor": 20.8,
+        "unidad": "Segundos"
+      },
+      {
+        "fecha": "2025-08-08",
+        "tipo": "carrera de 100m",
+        "valor": 10.8,
+        "unidad": "Segundos"
+      },
+      {
+        "fecha": "2025-08-18",
+        "tipo": "carrera de 100m",
+        "valor": 25.8,
+        "unidad": "Segundos"
+      },
+      {
+        "fecha": "2025-08-20",
+        "tipo": "carrera de 100m",
+        "valor": 30.8,
+        "unidad": "Segundos"
+      },
+      {
         "fecha": "2025-08-26",
         "tipo": "carrera de 400m",
         "valor": 58.4,

@@ -1,6 +1,7 @@
 package Entidades;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Comparator;
 public class atleta {
 private String nombre;
 private int edad;
@@ -28,10 +29,14 @@ public int getEdad() {return edad;}
 
 
     public void mostrarhistorial(){
+    // se verifica el nombre completo, si no hay registro en entrenamientos devuelve el string
     if (entrenamientos == null  ||  entrenamientos.isEmpty()){
         System.out.println("no hay entrenamietos registrados para: " + nombre);
         return;
     }
+        // se ordena la lista entrenamientos por fecha para cumplir con el requisito
+        // orden de redimiento por fecha
+        entrenamientos.sort(Comparator.comparing(Entrenamientos::getFecha));
         System.out.println("\nHistorial de entrenamientos: ");
         System.out.println("Atleta: "+nombre);
         System.out.println("Disciplina: "+ disciplina.getNombre()+"\n");
@@ -40,7 +45,7 @@ public int getEdad() {return edad;}
         System.out.println("-----------------------------------------------------------------");
         for (Entrenamientos e:entrenamientos){
             System.out.printf("%-12s| %-40s| %-10s| %-10s|\n",e.getFecha(),e.getTipo(),e.getValor(),e.getUnidad());
-
         }
     }
+
 }

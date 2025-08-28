@@ -86,6 +86,8 @@ public class Main {
                         System.out.println("-- Estadisticas del atleta-- :"+ nombreestadistica);
                         System.out.println("Promedio: " + estadisticas.promedio(s));
                         System.out.println("Mejor Marca: " + estadisticas.mejormarca(s));
+                        s.mostrarhistorial();
+
                     }else{
                         System.out.println("atleta no existe");
 
