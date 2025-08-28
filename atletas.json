@@ -4,10 +4,15 @@
     "edad": 24,
     "departamento": "guatemala",
     "disciplina": {
-      "nombre": "natacion",
-      "medida": "segundos"
+      "nombre": "natacion"
     },
     "entrenamientos": [
+      {
+        "fecha": "2025-08-25",
+        "tipo": "resistencia en piscina",
+        "valor": 350.5,
+        "unidad": "Segundos"
+      },
       {
         "fecha": "2025-08-27",
         "tipo": "natacion por vuelta",
@@ -15,10 +20,16 @@
         "unidad": "Segundos"
       },
       {
-        "fecha": "2025-08-25",
-        "tipo": "resistencia en piscina",
-        "valor": 350.5,
-        "unidad": "Segundos"
+        "fecha": "2025-08-27",
+        "tipo": "natacion",
+        "valor": 120.0,
+        "unidad": "segundos"
+      },
+      {
+        "fecha": "2025-08-27",
+        "tipo": "natacion",
+        "valor": 230.0,
+        "unidad": ""
       }
     ]
   },
@@ -27,8 +38,7 @@
     "edad": 21,
     "departamento": "quetzaltenango",
     "disciplina": {
-      "nombre": "atletismo",
-      "medida": "metros"
+      "nombre": "atletismo"
     },
     "entrenamientos": [
       {
@@ -74,8 +84,7 @@
     "edad": 27,
     "departamento": "sacatepequez",
     "disciplina": {
-      "nombre": "ciclismo",
-      "medida": "kilometros"
+      "nombre": "ciclismo"
     },
     "entrenamientos": [
       {
@@ -97,8 +106,7 @@
     "edad": 19,
     "departamento": "chimaltenango",
     "disciplina": {
-      "nombre": "pesas",
-      "medida": "kilogramos"
+      "nombre": "pesas"
     },
     "entrenamientos": [
       {
@@ -120,21 +128,36 @@
     "edad": 30,
     "departamento": "alta verapaz",
     "disciplina": {
-      "nombre": "boxeo",
-      "medida": "rounds"
+      "nombre": "boxeo"
     },
     "entrenamientos": [
       {
         "fecha": "2025-08-15",
         "tipo": "sparring",
-        "valor": 8,
-        "unidad": "Rounds"
+        "valor": 8.0,
+        "unidad": "Votacion"
       },
       {
         "fecha": "2025-08-25",
         "tipo": "bolsa pesada",
-        "valor": 5,
-        "unidad": "Rounds"
+        "valor": 5.0,
+        "unidad": "Votacion"
+      }
+    ]
+  },
+  {
+    "nombre": "maria ramirez",
+    "edad": 30,
+    "departamento": "Peten",
+    "disciplina": {
+      "nombre": "gimnacia"
+    },
+    "entrenamientos": [
+      {
+        "fecha": "2025-08-27",
+        "tipo": "gimnacia ritmica",
+        "valor": 8.5,
+        "unidad": "votacion"
       }
     ]
   }

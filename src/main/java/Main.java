@@ -39,7 +39,7 @@ public class Main {
                     String disc = leer.nextLine();
                     System.out.println("ingrese unidad de medida del entrenemiento de atleta: ");
                     String med = leer.nextLine();
-                    atleta atleta1 = new atleta(nombreregistro, edad,depart,new Disciplina(disc,med));
+                    atleta atleta1 = new atleta(nombreregistro, edad,depart,new Disciplina(disc));
                     gestor.agregar(atleta1);
                     System.out.println("atleta registrado exitosamente");
 
@@ -56,8 +56,8 @@ public class Main {
                         double datoentreno = leer.nextDouble();
                         leer.nextLine();
                         System.out.println("Ingrese la unidad de medida del entrenamiento");
-                        String medida = leer.nextLine();
-                        a.agregarEntrenamiento(new Entrenamientos(LocalDate.now(), tipo, datoentreno,medida));
+                        String unidad = leer.nextLine();
+                        a.agregarEntrenamiento(new Entrenamientos(LocalDate.now(), tipo, datoentreno,unidad));
                         System.out.println("entrenamiento agregado exitosamente");
                     }else{
                         System.out.println("ateleta no existe");

@@ -10,7 +10,7 @@ public class Entrenamientos {
         this.fecha = fecha;
         this.tipo = tipo;
         this.valor = valor;
-        this.unidad = "";
+        this.unidad = unidad;
 
     }
 
