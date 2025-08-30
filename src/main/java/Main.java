@@ -84,8 +84,8 @@ public class Main {
                     atleta s = gestor.buscar(nombreestadistica);
                     if (s != null) {
                         System.out.println("-- Estadisticas del atleta-- :"+ nombreestadistica);
-                        System.out.println("Promedio: " + estadisticas.promedio(s));
-                        System.out.println("Mejor Marca: " + estadisticas.mejormarca(s));
+                        System.out.println("Promedio: " + estadisticas.promedio(s) + " "+ s.getEntrenamientos().get(0).getUnidad() );
+                        System.out.println("Mejor Marca: " + estadisticas.mejormarca(s) + ": "+ s.getEntrenamientos().get(0).getUnidad());
                         s.mostrarhistorial();
 
                     }else{

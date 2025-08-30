@@ -6,7 +6,7 @@ public class GestorEstadistica {
     public double promedio(atleta atleta1){
         return atleta1.getEntrenamientos()
                 .stream().mapToDouble(Entrenamientos::getValor)
-                .average().orElse(0);
+                .average().orElse(0) ;
 
     }
 
@@ -15,7 +15,7 @@ public class GestorEstadistica {
         return 0;
         }
         double mejor = (atleta1.getEntrenamientos().get(0).getValor());
-        String unidad = atleta1.getEntrenamientos().get(0).getUnidad().toLowerCase();
+         String unidad = atleta1.getEntrenamientos().get(0).getUnidad().toLowerCase();
 
         for (Entrenamientos e : atleta1.getEntrenamientos()){
             String u = e.getUnidad().toLowerCase();
@@ -38,4 +38,5 @@ public class GestorEstadistica {
                 .stream().sorted(Comparator.comparing(Entrenamientos::getFecha))
                 .forEach( e -> System.out.println(e.getFecha() + " | "+e.getTipo() + " | "+e.getValor()));
     }
+
 }
