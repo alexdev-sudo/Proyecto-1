@@ -160,5 +160,70 @@
         "unidad": "votacion"
       }
     ]
+  },
+  {
+    "nombre": "luis",
+    "edad": 30,
+    "departamento": "guatemala",
+    "disciplina": {
+      "nombre": "natacion"
+    },
+    "entrenamientos": [
+      {
+        "fecha": "2025-08-30",
+        "tipo": "nado 100m",
+        "valor": 190.0,
+        "unidad": "segundos"
+      }
+    ]
+  },
+  {
+    "nombre": "oscar castro",
+    "edad": 21,
+    "departamento": "guatemala",
+    "disciplina": {
+      "nombre": "maraton"
+    },
+    "nacionalidad": "Guatemalteca",
+    "Fechaingreso": "22/03/2025",
+    "entrenamientos": []
+  },
+  {
+    "nombre": "alexander castro",
+    "edad": 24,
+    "departamento": "guatemala",
+    "disciplina": {
+      "nombre": "boxeo"
+    },
+    "nacionalidad": "guatemalteca",
+    "Fechaingreso": "22/03/2024",
+    "entrenamientos": []
+  },
+  {
+    "nombre": "popeye maradona",
+    "edad": 26,
+    "departamento": "san salvador",
+    "disciplina": {
+      "nombre": "futbolista "
+    },
+    "nacionalidad": "salvadoreno",
+    "Fechaingreso": "22/05/2001",
+    "entrenamientos": [
+      {
+        "fecha": "2025-09-27",
+        "tipo": "practica penales",
+        "valor": 10.0,
+        "unidad": "goles",
+        "Ubicacion": "Internacional"
+      },
+      {
+        "fecha": "2025-09-27",
+        "tipo": "practica penales",
+        "valor": 10.0,
+        "unidad": "goles",
+        "Ubicacion": "Nacional",
+        "pais": "Guatemala"
+      }
+    ]
   }
 ]

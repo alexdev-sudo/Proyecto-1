@@ -1,0 +1,73 @@
+@startuml
+package entidades{
+class atleta{
+-nombre:String
+-edad: int
+-departamento : String
+-disciplina: String
+-entrenamientos: List<Entrenamiento>
++agregarentrenamiento(e:Entrenamiento)
++getEntrenamientos()
+
+}
+
+class disciplina{
+-nombre: String
+-medicion: String
++getnombre()
++getmedida()
+
+}
+class Entrenamiento{
+-fecha: String
+-tipo :String
+-valor: double
+-Ubicacion : String
++getFecha()
++getTipo()
++getValor()
++getUbicacion()
+
+}
+}
+
+package gestion{
+interface Igestor<T>{
++agregar(T objet)
++buscar(String nombre): T
+
+class GestorAtletas implements Igestor<Atleta>
+
+class GestorEstadisstica{
++promedio(atetla)
++mejormarca(atletas)
++mostrarHistoria(atleta)
+}
+
+}
+
+package planilla{
+class pago{
+-#entrenos: int
+-bono_entrento_extranjero: double
+-bono_mejor_marca: double
+}
+}
+class main{
+}
+
+atleta "1" --> "*" Entrenamiento
+Entrenamiento "*" --> "1" disciplina
+GestorAtletas ..|> Igestor
+GestorEstadisstica ..|> Igestor
+Gestorplanilla "1" --> "1" pago
+main --> atleta
+main --> GestorAtletas
+main --> GestorEstadisstica
+main --> Gestorplanilla
+pago "1" --|> atleta
+
+
+
+
+@enduml

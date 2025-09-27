@@ -33,10 +33,37 @@ public class GestorEstadistica {
         }
             return mejor;
     }
-    public void mostrarHistorial(atleta atleta1){
-        atleta1.getEntrenamientos()
-                .stream().sorted(Comparator.comparing(Entrenamientos::getFecha))
-                .forEach( e -> System.out.println(e.getFecha() + " | "+e.getTipo() + " | "+e.getValor()));
+
+
+    public static void compararrendimiento(atleta a) {
+        String unidad = a.getEntrenamientos().get(0).getUnidad().toLowerCase();
+        if (a.getEntrenamientos() == null || a.getEntrenamientos().isEmpty()) {
+            System.out.println("el atleta" + a.getNombre() + "No tiene entrenamientos");
+            return;
+        }
+        // filtramos por ubicacion
+        double promedionacional = a.getEntrenamientos().stream().filter(e ->
+                        "Nacional".equalsIgnoreCase(e.getUbicacion())).mapToDouble(Entrenamientos::getValor)
+                .average().orElse(0);
+
+        double promedioextranjero = a.getEntrenamientos().stream().filter(e ->
+                        !"Nacional".equalsIgnoreCase(e.getUbicacion())).mapToDouble(Entrenamientos::getValor)
+                .average().orElse(0);
+        System.out.println("\n-- Comparacion de rendimiento de : " + a.getNombre() + " --");
+        System.out.println("Promedio Nacional : " + promedionacional + " " + unidadatleta(a));
+        System.out.println("Promedio Internacional : " + promedioextranjero + " " + unidadatleta(a));
+
+        if (promedionacional > promedioextranjero) {
+            System.out.println("➡ Mejor rendimiento en entrenamientos Nacionales");
+        } else if (promedioextranjero > promedionacional) {
+            System.out.println("➡ Mejor rendimiento en entrenamientos Internacionales");
+        } else {
+            System.out.println("➡ Rendimiento similar en entrenamientos Internacionales");
+        }
     }
 
+    private  static String unidadatleta(atleta a){
+        return a.getEntrenamientos().isEmpty()? "" :
+                a.getEntrenamientos().get(0).getUnidad();
+    }
 }
