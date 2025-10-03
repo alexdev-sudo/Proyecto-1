@@ -26,7 +26,8 @@ public class Main {
             System.out.println("3. Mostrar historial de un atleta");
             System.out.println("4. Mostrar estadisticas de un atleta");
             System.out.println("5. Mostrar Rendimiento Nacional VS Internacional");
-            System.out.println("6. Guardar y salir");
+            System.out.println("6. Mostrar planilla por atleta");
+            System.out.println("7. Guardar y salir");
             System.out.print("seleccione una opcion: ");
             opcion = leer.nextInt();
             switch(opcion) {
@@ -46,7 +47,7 @@ public class Main {
                     System.out.println("ingrese fechaingreso del atleta Formato (ddmmaaaa):  ");
                     String fechaingreso = atleta.leerfecha(leer);
 
-                    atleta atleta1 = new atleta(nombreregistro, edad, depart, new Disciplina(disc),
+                    atleta atleta1 = new atleta(nombreregistro, edad, depart, disc,
                             nacionalidad, fechaingreso);
                     gestor.agregar(atleta1);
                     System.out.println("atleta registrado exitosamente");
@@ -141,6 +142,34 @@ public class Main {
 
                     break;
                 case 6:
+                    leer.nextLine();
+                    System.out.println("-------------Planilla de atletas--------------");
+                    if (gestor.getAtletas().isEmpty()){
+                        System.out.println("Lista vacia, imposible buscar atleta");
+                        break;
+                    }
+                    // Mostrar Listado de atletas
+                    System.out.println("Lista de atletas registrados");
+                    for (int posicion = 0; posicion < gestor.getAtletas().size(); posicion++) {
+                        System.out.println((posicion + 1) + "." + gestor.getAtletas().get(posicion).getNombre());
+                    }
+                    System.out.println("----------------------------------------");
+                    System.out.println("Elige un atleta (numero) para saber su planilla : ");
+                     opcionatleta = leer.nextInt();
+                    if (opcionatleta >= 1 && opcionatleta <= gestor.getAtletas().size()) {
+                        atleta seleccionado = gestor.getAtletas().get(opcionatleta - 1);
+                        atleta  buscarT = gestor.buscar(seleccionado.getNombre());
+                        System.out.println("Seleccionaste : " + seleccionado.getNombre());
+                        Gestor_planilla planilla = new Gestor_planilla();
+                        planilla.pago_mensual(seleccionado);
+
+                    } else {
+                        System.out.println("opcion invalida");
+                    }
+
+                    break;
+
+                case 7:
                     json.guardar(gestor.getAtletas());
                     System.out.println("datos guardados exitosamente");
                     break;
@@ -149,7 +178,8 @@ public class Main {
 
             }
 
-        }while(opcion!=6);
+
+        }while(opcion!=7);
 
     }
 }

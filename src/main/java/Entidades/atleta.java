@@ -12,12 +12,12 @@ public class atleta {
 private String nombre;
 private int edad;
 private String departamento;
-private Disciplina disciplina;
+private String disciplina;
 private String nacionalidad;
 private String Fechaingreso;
 private List<Entrenamientos> entrenamientos;
 
-public atleta(String nombre,int edad,String departamento,Disciplina disciplina,
+public atleta(String nombre,int edad,String departamento,String disciplina,
               String nacionalidad,String Fechaingreso) {
     this.nombre = nombre;
     this.edad = edad;
@@ -35,9 +35,19 @@ public List <Entrenamientos> getEntrenamientos(){
     return entrenamientos;
 }
 
-public String getNombre() {return nombre;}
-public int getEdad() {return edad;}
+public String getNombre() {
+    return nombre;
+}
+public int getEdad() {
+    return edad;
+}
+public String getDepartamento() {
+    return disciplina;
+}
 
+    public  int getcount(){
+        return entrenamientos==null ? 0 : entrenamientos.size();
+    }
 
         public void mostrarhistorial(){
         // se verifica el nombre completo, si no hay registro en entrenamientos devuelve el string
@@ -50,7 +60,7 @@ public int getEdad() {return edad;}
             entrenamientos.sort(Comparator.comparing(Entrenamientos::getFecha));
             System.out.println("\nHistorial de entrenamientos: ");
             System.out.println("Atleta: "+nombre);
-            System.out.println("Disciplina: "+ disciplina.getNombre()+"\n");
+            System.out.println("Disciplina: "+ disciplina+"\n");
 
             System.out.printf("%-12s| %-40s| %-10s| %-10s| %-15s| %-10s|\n","Fecha","Tipo entreno ","Valor ","Unidad","Ubicacion", "pais");
             System.out.println("---------------------------------------------------------------------------------------------------------");
@@ -96,7 +106,7 @@ public int getEdad() {return edad;}
         filtrados.sort(Comparator.comparing(Entrenamientos::getFecha));
         System.out.println("\nHistorial de entrenamientos: ");
         System.out.println("Atleta: "+nombre);
-        System.out.println("Disciplina: "+ disciplina.getNombre()+"\n");
+        System.out.println("Disciplina: "+ disciplina+"\n");
 
         System.out.printf("%-12s| %-40s| %-10s| %-10s| %-15s| %-10s|\n","Fecha","Tipo entreno ","Valor ","Unidad","Ubicacion", "pais");
         System.out.println("---------------------------------------------------------------------------------------------------------");
@@ -125,7 +135,7 @@ public int getEdad() {return edad;}
         filtrados.sort(Comparator.comparing(Entrenamientos::getFecha));
         System.out.println("\nHistorial de entrenamientos: ");
         System.out.println("Atleta: "+nombre);
-        System.out.println("Disciplina: "+ disciplina.getNombre()+"\n");
+        System.out.println("Disciplina: "+ disciplina+"\n");
 
         System.out.printf("%-12s| %-40s| %-10s| %-10s| %-15s| %-10s|\n","Fecha","Tipo entreno ","Valor ","Unidad","Ubicacion", "pais");
         System.out.println("---------------------------------------------------------------------------------------------------------");
