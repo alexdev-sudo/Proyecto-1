@@ -16,5 +16,14 @@
         "pais": "guatemala"
       }
     ]
+  },
+  {
+    "nombre": "alexander castro",
+    "edad": 26,
+    "departamento": "peten",
+    "disciplina": "boxeo",
+    "nacionalidad": "guatemalteca",
+    "Fechaingreso": "22/03/2015",
+    "entrenamientos": []
   }
 ]

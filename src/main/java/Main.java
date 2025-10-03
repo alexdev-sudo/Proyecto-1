@@ -1,7 +1,7 @@
 
 import Entidades.*;
 import Gestiones.*;
-import Persistencia.GestorJSON;
+import Persistencia.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +51,8 @@ public class Main {
                             nacionalidad, fechaingreso);
                     gestor.agregar(atleta1);
                     System.out.println("atleta registrado exitosamente");
-
+                    Persistencia.atletaDAO guardar = new Persistencia.atletaDAO();
+                    guardar.guardar(atleta1);
                     break;
                 case 2:
                     leer.nextLine();

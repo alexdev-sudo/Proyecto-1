@@ -44,7 +44,15 @@ public int getEdad() {
 public String getDepartamento() {
     return disciplina;
 }
-
+public  String getDisciplina(){
+    return nacionalidad;
+}
+public String getFechaingreso() {
+    return Fechaingreso;
+}
+public String getNacionalidad() {
+    return nacionalidad;
+}
     public  int getcount(){
         return entrenamientos==null ? 0 : entrenamientos.size();
     }
