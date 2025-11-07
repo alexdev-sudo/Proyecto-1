@@ -25,5 +25,23 @@
     "nacionalidad": "guatemalteca",
     "Fechaingreso": "22/03/2015",
     "entrenamientos": []
+  },
+  {
+    "nombre": "luis alvarado",
+    "edad": 42,
+    "departamento": "guatemala",
+    "disciplina": "atltismo",
+    "nacionalidad": "guatemalteca",
+    "Fechaingreso": "22/03/2021",
+    "entrenamientos": [
+      {
+        "fecha": "2025-10-04",
+        "tipo": "carrera 100 m ",
+        "valor": 120.0,
+        "unidad": "segundos",
+        "Ubicacion": "Nacional",
+        "pais": "guatemala"
+      }
+    ]
   }
 ]
